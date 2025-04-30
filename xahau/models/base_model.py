@@ -218,6 +218,7 @@ class BaseModel(ABC):
             error_message = (
                 f"{param} expected a {param_type}, received a {type(param_value)}"
             )
+            return param_value #important
         raise XAHLModelException(error_message)
 
     @classmethod
